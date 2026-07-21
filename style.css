@@ -2356,7 +2356,7 @@ flex-wrap: wrap;
     }
 }
 
-/* ================= GLOBAL RESET ================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -2368,15 +2368,16 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    /* Gorizontal scroll butunlay yo'qolishi uchun */
 }
 
-/* ================= DESKTOP HEADER STYLES ================= */
+
+
+
 .main-header {
     width: 100%;
-    background-color: #FFFFFF;
-    padding: 20px 0;
-    border-bottom: 1px solid #F3F5F7;
+    background-color: #ffffff;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .header-container {
@@ -2384,91 +2385,82 @@ body {
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
-    justify-content: space-between;
-    /* Morentni chapga, tugmalarni o'ngga suradi */
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
+
 .logo {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     color: #3563E9;
     text-decoration: none;
 }
 
-/* Tugmalar bloki alignmenti */
+
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+
 }
 
-/* Back va Next tugmalari dizayni */
+
 .btn-back,
 .btn-next {
-    text-decoration: none;
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 14px;
     font-weight: 600;
-    font-size: 15px;
-    transition: all 0.2s ease;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .btn-back {
-    color: #90A3BF;
     background-color: #F6F7F9;
-}
-
-.btn-back:hover {
-    background-color: #E5E7EB;
+    color: #90A3BF;
 }
 
 .btn-next {
-    color: #FFFFFF;
     background-color: #3563E9;
+    color: #FFFFFF;
+}
+
+.btn-back:hover {
+    background-color: #e5e7eb;
 }
 
 .btn-next:hover {
-    background-color: #1a44c2;
+    background-color: #274cc8;
 }
 
-/* Dumaloq aylanali chiroyli ikonka tugmalari */
+
 .action-icon {
-    background: #FFFFFF;
-    border: 1px solid #C3D4E9;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.action-icon i {
-    font-size: 18px;
+    border: 1px solid #C3D4E9;
+    background: #ffffff;
     color: #596780;
-    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
 }
 
 .action-icon:hover {
-    border-color: #3563E9;
     background-color: #F6F7F9;
 }
 
-.action-icon:hover i {
-    color: #3563E9;
-}
 
-/* Profil avatar qismi */
 .profile-avatar {
     width: 44px;
     height: 44px;
     border-radius: 50%;
     overflow: hidden;
-    border: 1px solid #C3D4E9;
 }
 
 .profile-avatar img {
@@ -2477,22 +2469,21 @@ body {
     object-fit: cover;
 }
 
-/* Desktopda keraksiz mobil elementlarni berkitib turamiz */
 .menu-toggle,
 .burger-btn,
 .nav-menu {
     display: none;
 }
 
-/* ================= 📱 RESPONSIVE MEDIA (TELEFON VERSIYASI) ================= */
+
 @media (max-width: 768px) {
 
-    /* 1. Rasmdagi barcha tugmalarni bir vaqtda yashiramiz ❌ */
+
     .header-actions {
         display: none !important;
     }
 
-    /* 2. Ularning o'rniga faqat Burger tugmasini chiqaramiz 🍔 */
+
     .burger-btn {
         display: flex !important;
         flex-direction: column;
@@ -2512,13 +2503,11 @@ body {
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    /* 3. Telefonda ochiladigan mobil menyu paneli stillari */
     .nav-menu {
         display: flex;
         position: fixed;
         top: 0;
         right: -100%;
-        /* Dastlab yashirin turadi */
         width: 70%;
         height: 100vh;
         background-color: #FFFFFF;
@@ -2543,13 +2532,11 @@ body {
         color: #3563E9;
     }
 
-    /* 👇 CSS Effektlar: Burger bosilganda menyuni chiqarish 👇 */
     .menu-toggle:checked~.nav-menu {
         right: 0;
-        /* Menyuni ekranga olib kiradi */
+
     }
 
-    /* Burgerni X holatiga keltirish */
     .menu-toggle:checked~.burger-btn span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -2567,58 +2554,45 @@ body {
     }
 }
 
-/* Asosiy reklama kartochkasi */
+
 .hero-card {
     position: relative;
     overflow: hidden;
-    /* Rasmni chetdan chiqib ketmasligi uchun ushlab turadi, lekin pastga tiqib qo'ymaydi */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* 👇 MOSHINA RASMI FULL VA TO'LIQ KO'RINISHI UCHUN 👇 */
+
 .hero-img-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* Rasmni o'rtaga tekislaydi */
     align-items: flex-end;
     margin-top: 20px;
-    /* Matnlardan biroz masofa */
 }
 
 .hero-card img {
     width: 100%;
-    /* Kengligi konteynerga moslashadi */
     max-width: 406px;
-    /* Figmadagi asl o'lchami (kattalashib ketmasligi uchun) */
     height: auto;
-    /* Proporsiyasi buzilmaydi */
     object-fit: contain;
-    /* Rasm kesilmasdan, to'liq ko'rinadi */
     display: block;
     margin: 0 auto;
-    /* O'rtaga tekislash uchun */
 }
 
 .hero-card img {
     position: absolute;
     bottom: 10px;
-    /* Pastki chetdan ozgina teparoqqa ko'taradi */
     right: 20px;
-    /* O'ng chetdan masofa */
     width: 80%;
-    /* Blok ichiga to'liq sig'ishi uchun kichraytiriladi */
     height: auto;
     object-fit: contain;
-    /* Kesilishni taqiqlaydi */
 }
 
-/* ================= 📱 MOBILDA REKLAMALARNI USTMA-UST QILISH ================= */
+
 @media (max-width: 768px) {
 
-    /* Reklamalar o'ralgan asosiy katta blokni majburlab bitta ustun qilib qo'yamiz */
     section.hero-section,
     div.hero-container,
     div.hero-wrapper {
@@ -2628,7 +2602,7 @@ body {
         width: 100% !important;
     }
 
-    /* Ichidagi ikkala ko'k banner ham eniga 100% bo'ladi va siqilmaydi */
+
     section.hero-section>div,
     div.hero-container>div,
     .hero-card {
@@ -2650,4 +2624,122 @@ body {
         margin: 15px auto 0 auto !important;
         display: block !important;
     }
-} 
+}
+
+/* ================= HEADER STYLES ================= */
+.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 16px 0;
+    border-bottom: 1px solid #F3F5F7;
+}
+
+.header-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Chap va o'ng tomonni ajratadi */
+    box-sizing: border-box;
+}
+
+/* CHAP TARAF: Logo va Back/Next */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /* Logo va tugmalar orasidagi masofa */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3563E9;
+    text-decoration: none;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-back,
+.btn-next {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+.btn-back {
+    background-color: #F6F7F9;
+    color: #90A3BF;
+}
+
+.btn-next {
+    background-color: #3563E9;
+    color: #FFFFFF;
+}
+
+.btn-back:hover {
+    background-color: #E9ECEF;
+}
+
+.btn-next:hover {
+    background-color: #274CC8;
+}
+
+/* O'NG TARAF: Ikonkalar va Profil */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Ikonkalar bloki va profil orasidagi masofa */
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* Ikonkalar orasidagi masofa */
+}
+
+.action-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #C3D4E9;
+    background: #ffffff;
+    color: #596780;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.action-icon:hover {
+    background-color: #F6F7F9;
+}
+
+/* Profil Rasmi (Eng oxirida) */
+.profile-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
