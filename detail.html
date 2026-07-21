@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morent - Car Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+
+
+    <!-- ================= COMPLETED HEADER BOSHIDAN ================= -->
+    <header class="main-header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <div class="header-container">
+
+            <!-- Chap tomonda: Logo -->
+            <a href="index.html" class="logo">MORENT</a>
+
+            <!-- 🍔 Mobil menyu uchun toggle (Faqat telefonda ko'rinadi) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- O'ng tomonda: Katta ekrandagi barcha tugmalar (Telefonda yashirinadi) -->
+            <div class="header-actions">
+                <a href="index.html" class="btn-back">Back</a>
+                <a href="category.html" class="btn-next">Next</a>
+
+                <!-- Professional Ikonkalar -->
+                <button class="action-icon"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-icon"><i class="fa-regular fa-bell"></i></button>
+                <button class="action-icon"><i class="fa-solid fa-gear"></i></button>
+
+                <div class="profile-avatar">
+                    <img src="img/avatar.png" alt="User">
+                </div>
+            </div>
+
+            <!-- Mobil telefonlarda burger bosilganda ochiladigan menyu paneli -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="category.html" class="nav-item">Search</a>
+                <a href="#" class="nav-item">Favorites</a>
+                <a href="#" class="nav-item">Inbox</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="category-wrapper">
+
+        <aside class="sidebar">
+
+            <div class="filter-section">
+                <h4 class="filter-title">T Y P E</h4>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" checked> Sport <span class="count">(10)</span></label>
+                    <label><input type="checkbox" checked> SUV <span class="count">(12)</span></label>
+                    <label><input type="checkbox"> MPV <span class="count">(16)</span></label>
+                    <label><input type="checkbox"> Sedan <span class="count">(20)</span></label>
+                    <label><input type="checkbox"> Coupe <span class="count">(14)</span></label>
+                    <label><input type="checkbox"> Hatchback <span class="count">(14)</span></label>
+                </div>
+            </div>
+
+
+            <div class="filter-section">
+                <h4 class="filter-title">C A P A C I T Y</h4>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" checked> 2 Person <span class="count">(10)</span></label>
+                    <label><input type="checkbox"> 4 Person <span class="count">(14)</span></label>
+                    <label><input type="checkbox"> 6 Person <span class="count">(12)</span></label>
+                    <label><input type="checkbox" checked> 8 or More <span class="count">(16)</span></label>
+                </div>
+            </div>
+
+
+            <div class="filter-section">
+                <h4 class="filter-title">P R I C E</h4>
+                <div class="price-slider-container">
+                    <input type="range" min="0" max="100" value="100" class="price-slider">
+                    <p class="price-value">Max. $100.00</p>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="category-content">
+
+
+            <section class="detail-hero-section" style="display: flex; gap: 32px; margin-bottom: 32px;">
+
+                <div class="detail-gallery" style="flex: 1; display: flex; flex-direction: column; gap: 24px;">
+                    <div class="gallery-main-card"
+                        style="background: linear-gradient(135deg, #3563E9 0%, #0B193C 100%); color: white; border-radius: 10px; padding: 24px; position: relative; overflow: hidden; min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h2
+                                style="font-size: 28px; font-weight: 600; line-height: 140%; max-width: 320px; margin-bottom: 12px;">
+                                Sports car with the best design and acceleration</h2>
+                            <p style="font-size: 14px; color: #E0E7FF; max-width: 260px;">Safety and comfort while
+                                driving a futuristic and elegant sports car</p>
+                        </div>
+                        <div class="main-car-img"
+                            style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
+                            <img src="./images/image 8.png" alt="Nissan GT-R Main"
+                                style="width: 80%; max-width: 380px; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <div class="gallery-thumbs" style="display: flex; gap: 20px;">
+                        <div class="thumb-box active"
+                            style="border: 2px solid #3563E9; padding: 6px; border-radius: 8px; flex: 1; cursor: pointer; background: #3563E9;">
+                            <img src="./images/Car copy.png" alt="Thumb 1"
+                                style="width: 100%; object-fit: contain; border-radius: 4px;">
+                        </div>
+                        <div class="thumb-box"
+                            style="border: 1px solid #E2E8F0; border-radius: 8px; flex: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; background: #FFF;">
+                            <img src="./images/View 2.png" alt="Interior 1"
+                                style="width: 100%; object-fit: contain; border-radius: 6px;">
+                        </div>
+                        <div class="thumb-box"
+                            style="border: 1px solid #E2E8F0; border-radius: 8px; flex: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; background: #FFF;">
+                            <img src="./images/View 3.png" alt="Interior 2"
+                                style="width: 100%; object-fit: contain; border-radius: 6px;">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="detail-specs-card"
+                    style="flex: 1; background: #FFFFFF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #E2E8F0;">
+                    <div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                            <h2 style="font-size: 28px; color: #1A202C; font-weight: 700;">Nissan GT - R</h2>
+                            <span style="color: red; font-size: 24px; cursor: pointer;">❤️</span>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                            <span style="color: #FBAD15; font-size: 16px;">★★★★☆</span>
+                            <span style="font-size: 12px; color: #596780; font-weight: 500;">440+ Reviewer</span>
+                        </div>
+
+
+                        <p style="font-size: 15px; line-height: 180%; color: #596780; margin-bottom: 32px;">
+                            NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most
+                            unforgiving proving ground, the "race track".
+                        </p>
+
+                        <div class="specs-grid"
+                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px 32px; margin-bottom: 24px;">
+                            <div style="display: flex; justify-content: space-between;"><span
+                                    style="color: #90A3BF;">Type Car</span><span
+                                    style="color: #596780; font-weight: 600;">Sport</span></div>
+                            <div style="display: flex; justify-content: space-between;"><span
+                                    style="color: #90A3BF;">Capacity</span><span
+                                    style="color: #596780; font-weight: 600;">2 Person</span></div>
+                            <div style="display: flex; justify-content: space-between;"><span
+                                    style="color: #90A3BF;">Steering</span><span
+                                    style="color: #596780; font-weight: 600;">Manual</span></div>
+                            <div style="display: flex; justify-content: space-between;"><span
+                                    style="color: #90A3BF;">Gasoline</span><span
+                                    style="color: #596780; font-weight: 600;">70L</span></div>
+                        </div>
+                    </div>
+
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                        <div>
+                            <div style="font-size: 24px; font-weight: 700; color: #1A202C;">$80.00/ <span
+                                    style="font-size: 14px; color: #90A3BF; font-weight: 500;">days</span></div>
+                            <span style="font-size: 14px; color: #90A3BF; text-decoration: line-through;">$100.00</span>
+                        </div>
+                        <button
+                            style="background: #3563E9; color: white; border: none; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 15px; cursor: pointer;">Rent
+                            Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews-section"
+                style="background: #FFFFFF; border-radius: 10px; padding: 24px; border: 1px solid #E2E8F0; margin-bottom: 32px;">
+
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <h3 style="font-size: 20px; font-weight: 600; color: #1A202C;">Reviews</h3>
+                    <span
+                        style="background: #3563E9; color: white; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 4px;">13</span>
+                </div>
+
+                <div class="review-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+                    <div class="avatar"
+                        style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: #E2E8F0;">
+                        <img src="./images/Profill (2).png" alt="Alex Stanton"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: #1A202C;">Alex Stanton</h4>
+                                <p style="font-size: 12px; color: #90A3BF;">CEO at Bukalapak</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="font-size: 12px; color: #90A3BF; margin-bottom: 4px;">21 July 2022</p>
+                                <span style="color: #FBAD15; font-size: 14px;">★★★★☆</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px; line-height: 170%; color: #596780;">
+                            We are very happy with the service from the MORENT App. Morent has a low price and also a
+                            large variety of cars with good and comfortable facilities. In addition, the service
+                            provided by the officers is also very friendly and very polite.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="review-item" style="display: flex; gap: 16px; margin-bottom: 24px;">
+                    <div class="avatar"
+                        style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: #E2E8F0;">
+                        <img src="./images/Profill (1).png" alt="Skylar Dias"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                            <div>
+                                <h4 style="font-size: 16px; font-weight: 700; color: #1A202C;">Skylar Dias</h4>
+                                <p style="font-size: 12px; color: #90A3BF;">CEO at Amazon</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p style="font-size: 12px; color: #90A3BF; margin-bottom: 4px;">20 July 2022</p>
+                                <span style="color: #FBAD15; font-size: 14px;">★★★★☆</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 14px; line-height: 170%; color: #596780;">
+                            We are greatly helped by the services of the MORENT Application. Morent has low prices and
+                            also a wide variety of cars with good and comfortable facilities. In addition, the service
+                            provided by the officers is also very friendly and very polite.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 16px;">
+                    <button
+                        style="background: none; border: none; color: #90A3BF; font-weight: 600; cursor: pointer; font-size: 14px;">Show
+                        All ∨</button>
+                </div>
+            </section>
+
+
+            <section class="car-section" style="margin-bottom: 32px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="color: #90A3BF; font-weight: 600; font-size: 15px;">Recent Car</span>
+                    <a href="#" style="color: #3563E9; text-decoration: none; font-weight: 600; font-size: 14px;">View
+                        All</a>
+                </div>
+
+                <div class="category-car-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>Koenigsegg</h3>
+                                <p>Sport</p>
+                            </div>
+                            <span class="heart-icon" style="color: red;">❤️</span>
+                        </div>
+                        <div class="car-image"><img src="./images/car.png" alt="Koenigsegg"></div>
+                        <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
+                        <div class="car-footer">
+                            <div class="price"><span class="amount">$99.00/</span><span class="unit">day</span></div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>Nissan GT-R</h3>
+                                <p>Sport</p>
+                            </div>
+                            <span class="heart-icon">🤍</span>
+                        </div>
+                        <div class="car-image"><img src="./images/car (1).png" alt="Nissan"></div>
+                        <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
+                        <div class="car-footer">
+                            <div class="price">
+                                <span class="amount">$80.00/</span><span class="unit">day</span>
+                                <p class="old-price">$100.00</p>
+                            </div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>Rolls-Royce</h3>
+                                <p>Sport</p>
+                            </div>
+                            <span class="heart-icon">🤍</span>
+                        </div>
+                        <div class="car-image"><img src="./images/Car (2).png" alt="Rolls-Royce"></div>
+                        <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 4 People</span></div>
+                        <div class="car-footer">
+                            <div class="price"><span class="amount">$96.00/</span><span class="unit">day</span></div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="car-section" style="margin-bottom: 40px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="color: #90A3BF; font-weight: 600; font-size: 15px;">Recomendation Car</span>
+                    <a href="#" style="color: #3563E9; text-decoration: none; font-weight: 600; font-size: 14px;">View
+                        All</a>
+                </div>
+
+                <div class="category-car-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>All New Rush</h3>
+                                <p>SUV</p>
+                            </div>
+                            <span class="heart-icon">🤍</span>
+                        </div>
+                        <div class="car-image"><img src="./images/Car (4).png" alt="All New Rush"></div>
+                        <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                        <div class="car-footer">
+                            <div class="price">
+                                <span class="amount">$72.00/</span><span class="unit">day</span>
+                                <p class="old-price">$80.00</p>
+                            </div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>CR - V</h3>
+                                <p>SUV</p>
+                            </div>
+                            <span class="heart-icon" style="color: red;">❤️</span>
+                        </div>
+                        <div class="car-image"><img src="./images/Car (5).png" alt="CR - V"></div>
+                        <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                        <div class="car-footer">
+                            <div class="price"><span class="amount">$80.00/</span><span class="unit">day</span></div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-card-header">
+                            <div>
+                                <h3>All New Terios</h3>
+                                <p>SUV</p>
+                            </div>
+                            <span class="heart-icon">🤍</span>
+                        </div>
+                        <div class="car-image"><img src="./images/Car (6).png" alt="All New Terios"></div>
+                        <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                        <div class="car-footer">
+                            <div class="price"><span class="amount">$74.00/</span><span class="unit">day</span></div>
+                            <button class="rent-btn">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">MORENT</a>
+                    <p class="footer-desc">Our vision is to provide convenience and help increase your sales business.
+                    </p>
+                </div>
+
+                <div class="footer-links-container">
+                    <div class="footer-col">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">How it works</a></li>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Partnership</a></li>
+                            <li><a href="#">Bussiness Relation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Community</h3>
+                        <ul>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Podcast</a></li>
+                            <li><a href="#">Invite a friend</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Socials</h3>
+                        <ul>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-bottom">
+                <p class="copyright">©2022 MORENT. All rights reserved</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy & Policy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
