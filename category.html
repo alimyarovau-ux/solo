@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morent - Category Car List</title>
+    <!-- FontAwesome va CSS linklari head ichida bo'lishi shart -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="fade-in">
 
-    
     <header class="main-header">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <div class="header-container">
 
             <a href="index.html" class="logo">MORENT</a>
@@ -24,7 +24,6 @@
                 <span></span>
             </label>
 
-           
             <div class="header-actions">
                 <a href="index.html" class="btn-back">Back</a>
                 <a href="category.html" class="btn-next">Next</a>
@@ -34,313 +33,320 @@
                 <button class="action-icon"><i class="fa-solid fa-gear"></i></button>
 
                 <div class="profile-avatar">
-                    <img src="./images/Profill (1).png
-                    " alt="User">
+                    <!-- Rasm yo'li va qo'shtirnoq to'g'rilandi -->
+                    <img src="./images/Profill (1).png" alt="User">
                 </div>
             </div>
 
-            
             <nav class="nav-menu">
                 <a href="index.html" class="nav-item">Home</a>
                 <a href="category.html" class="nav-item">Search</a>
                 <a href="#" class="nav-item">Favorites</a>
                 <a href="#" class="nav-item">Inbox</a>
             </nav>
-
+            <div class="header-actions">
+                <a href="category.html" class="btn-back">Back</a>
+                <a href="detail.html" class="btn-next">Next</a>
+                ...
+            </div>
         </div>
     </header>
-    
+
+</body>
+
+</html>
 
 
-    <div class="category-wrapper">
+<div class="category-wrapper">
 
-        <aside class="sidebar">
+    <aside class="sidebar">
 
-            <div class="filter-section">
-                <h4 class="filter-title">T Y P E</h4>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" checked> Sport <span class="count">(10)</span></label>
-                    <label><input type="checkbox" checked> SUV <span class="count">(12)</span></label>
-                    <label><input type="checkbox"> MPV <span class="count">(16)</span></label>
-                    <label><input type="checkbox"> Sedan <span class="count">(20)</span></label>
-                    <label><input type="checkbox"> Coupe <span class="count">(14)</span></label>
-                    <label><input type="checkbox"> Hatchback <span class="count">(14)</span></label>
-                </div>
+        <div class="filter-section">
+            <h4 class="filter-title">T Y P E</h4>
+            <div class="checkbox-group">
+                <label><input type="checkbox" checked> Sport <span class="count">(10)</span></label>
+                <label><input type="checkbox" checked> SUV <span class="count">(12)</span></label>
+                <label><input type="checkbox"> MPV <span class="count">(16)</span></label>
+                <label><input type="checkbox"> Sedan <span class="count">(20)</span></label>
+                <label><input type="checkbox"> Coupe <span class="count">(14)</span></label>
+                <label><input type="checkbox"> Hatchback <span class="count">(14)</span></label>
             </div>
-
-            <div class="filter-section">
-                <h4 class="filter-title">C A P A C I T Y</h4>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" checked> 2 Person <span class="count">(10)</span></label>
-                    <label><input type="checkbox"> 4 Person <span class="count">(14)</span></label>
-                    <label><input type="checkbox"> 6 Person <span class="count">(12)</span></label>
-                    <label><input type="checkbox" checked> 8 or More <span class="count">(16)</span></label>
-                </div>
-            </div>
-
-
-            <div class="filter-section">
-                <h4 class="filter-title">P R I C E</h4>
-                <div class="price-slider-container">
-                    <input type="range" min="0" max="100" value="100" class="price-slider">
-                    <p class="price-value">Max. $100.00</p>
-                </div>
-            </div>
-        </aside>
-
-
-        <main class="category-content">
-
-            <section class="booking-container" style="margin-top: 0;">
-                <div class="booking-card">
-                    <div class="card-title">
-                        <span class="dot blue-dot"></span>
-                        <h3>Pick - Up</h3>
-                    </div>
-                    <div class="booking-fields">
-                        <div class="field-group">
-                            <label>Locations</label>
-                            <select>
-                                <option>Select your city</option>
-                            </select>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="field-group">
-                            <label>Date</label>
-                            <select>
-                                <option>Select your date</option>
-                            </select>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="field-group">
-                            <label>Time</label>
-                            <select>
-                                <option>Select your time</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="switch-btn"><span class="switch-icon">↕</span></button>
-
-                <div class="booking-card">
-                    <div class="card-title">
-                        <span class="dot light-blue-dot"></span>
-                        <h3>Drop - Off</h3>
-                    </div>
-                    <div class="booking-fields">
-                        <div class="field-group">
-                            <label>Locations</label>
-                            <select>
-                                <option>Select your city</option>
-                            </select>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="field-group">
-                            <label>Date</label>
-                            <select>
-                                <option>Select your date</option>
-                            </select>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="field-group">
-                            <label>Time</label>
-                            <select>
-                                <option>Select your time</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="car-section">
-                <div class="category-car-grid">
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>Koenigsegg</h3>
-                                <p>Sport</p>
-                            </div>
-                            <span class="heart-icon" style="color: red;">❤️</span>
-                        </div>
-                        <div class="car-image"><img src="./images/car.png" alt="Koenigsegg"></div>
-                        <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
-                        <div class="car-footer">
-                            <div class="price"><span class="amount">$99.00/</span><span class="unit">day</span></div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>Nissan GT-R</h3>
-                                <p>Sport</p>
-                            </div>
-                            <span class="heart-icon">🤍</span>
-                        </div>
-                        <div class="car-image"><img src="./images/car (1).png" alt="Nissan GT-R"></div>
-                        <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
-                        <div class="car-footer">
-                            <div class="price">
-                                <span class="amount">$80.00/</span><span class="unit">day</span>
-                                <p class="old-price">$100.00</p>
-                            </div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>Rolls-Royce</h3>
-                                <p>Sport</p>
-                            </div>
-                            <span class="heart-icon">🤍</span>
-                        </div>
-                        <div class="car-image"><img src="./images/Car (2).png" alt="Rolls-Royce"></div>
-                        <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 4 People</span></div>
-                        <div class="car-footer">
-                            <div class="price"><span class="amount">$96.00/</span><span class="unit">day</span></div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>All New Rush</h3>
-                                <p>SUV</p>
-                            </div>
-                            <span class="heart-icon">🤍</span>
-                        </div>
-                        <div class="car-image"><img src="./images/Car (4).png" alt="All New Rush"></div>
-                        <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
-                        <div class="car-footer">
-                            <div class="price">
-                                <span class="amount">$72.00/</span><span class="unit">day</span>
-                                <p class="old-price">$80.00</p>
-                            </div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>CR - V</h3>
-                                <p>SUV</p>
-                            </div>
-                            <span class="heart-icon" style="color: red;">❤️</span>
-                        </div>
-                        <div class="car-image"><img src="./images/Car (5).png" alt="CR - V"></div>
-                        <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
-                        <div class="car-footer">
-                            <div class="price"><span class="amount">$80.00/</span><span class="unit">day</span></div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-
-                    <div class="car-card">
-                        <div class="car-card-header">
-                            <div>
-                                <h3>All New Terios</h3>
-                                <p>SUV</p>
-                            </div>
-                            <span class="heart-icon">🤍</span>
-                        </div>
-                        <div class="car-image"><img src="./images/Car (6).png" alt="All New Terios"></div>
-                        <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
-                        <div class="car-footer">
-                            <div class="price"><span class="amount">$74.00/</span><span class="unit">day</span></div>
-                            <button class="rent-btn">Rent Now</button>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="load-more-container">
-                    <button class="show-more-btn">Show more car</button>
-                    <span class="car-count">120 Car</span>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <script src="script.js"></script>
-    <!-- FOOTER SECTION -->
-    <footer class="main-footer">
-        <div class="container">
-
-            <!-- Footer Yuqori qismi -->
-            <div class="footer-top">
-                <!-- Brand va Shior -->
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">MORENT</a>
-                    <p>Our vision is to provide convenience and help increase your sales business.</p>
-                </div>
-
-                <!-- Linklar guruhlari -->
-                <div class="footer-links-container">
-                    <!-- About ustuni -->
-                    <div class="footer-col">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">How it works</a></li>
-                            <li><a href="#">Featured</a></li>
-                            <li><a href="#">Partnership</a></li>
-                            <li><a href="#">Bussiness Relation</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Community ustuni -->
-                    <div class="footer-col">
-                        <h3>Community</h3>
-                        <ul>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Podcast</a></li>
-                            <li><a href="#">Invite a friend</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Socials ustuni -->
-                    <div class="footer-col">
-                        <h3>Socials</h3>
-                        <ul>
-                            <li><a href="#">Discord</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Yupqa ajratuvchi chiziq -->
-            <div class="footer-divider"></div>
-
-            <!-- Footer Pastki qismi -->
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    <p>©2022 MORENT. All rights reserved</p>
-                </div>
-                <div class="footer-legal">
-                    <a href="#">Privacy & Policy</a>
-                    <a href="#">Terms & Condition</a>
-                </div>
-            </div>
-
         </div>
-    </footer>
+
+        <div class="filter-section">
+            <h4 class="filter-title">C A P A C I T Y</h4>
+            <div class="checkbox-group">
+                <label><input type="checkbox" checked> 2 Person <span class="count">(10)</span></label>
+                <label><input type="checkbox"> 4 Person <span class="count">(14)</span></label>
+                <label><input type="checkbox"> 6 Person <span class="count">(12)</span></label>
+                <label><input type="checkbox" checked> 8 or More <span class="count">(16)</span></label>
+            </div>
+        </div>
+
+
+        <div class="filter-section">
+            <h4 class="filter-title">P R I C E</h4>
+            <div class="price-slider-container">
+                <input type="range" min="0" max="100" value="100" class="price-slider">
+                <p class="price-value">Max. $100.00</p>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <main class="category-content">
+
+        <section class="booking-container" style="margin-top: 0;">
+            <div class="booking-card">
+                <div class="card-title">
+                    <span class="dot blue-dot"></span>
+                    <h3>Pick - Up</h3>
+                </div>
+                <div class="booking-fields">
+                    <div class="field-group">
+                        <label>Locations</label>
+                        <select>
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="field-group">
+                        <label>Date</label>
+                        <select>
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="field-group">
+                        <label>Time</label>
+                        <select>
+                            <option>Select your time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="switch-btn"><span class="switch-icon">↕</span></button>
+
+            <div class="booking-card">
+                <div class="card-title">
+                    <span class="dot light-blue-dot"></span>
+                    <h3>Drop - Off</h3>
+                </div>
+                <div class="booking-fields">
+                    <div class="field-group">
+                        <label>Locations</label>
+                        <select>
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="field-group">
+                        <label>Date</label>
+                        <select>
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="field-group">
+                        <label>Time</label>
+                        <select>
+                            <option>Select your time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="car-section">
+            <div class="category-car-grid">
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>Koenigsegg</h3>
+                            <p>Sport</p>
+                        </div>
+                        <span class="heart-icon" style="color: red;">❤️</span>
+                    </div>
+                    <div class="car-image"><img src="./images/car.png" alt="Koenigsegg"></div>
+                    <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
+                    <div class="car-footer">
+                        <div class="price"><span class="amount">$99.00/</span><span class="unit">day</span></div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>Nissan GT-R</h3>
+                            <p>Sport</p>
+                        </div>
+                        <span class="heart-icon">🤍</span>
+                    </div>
+                    <div class="car-image"><img src="./images/car (1).png" alt="Nissan GT-R"></div>
+                    <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 2 People</span></div>
+                    <div class="car-footer">
+                        <div class="price">
+                            <span class="amount">$80.00/</span><span class="unit">day</span>
+                            <p class="old-price">$100.00</p>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>Rolls-Royce</h3>
+                            <p>Sport</p>
+                        </div>
+                        <span class="heart-icon">🤍</span>
+                    </div>
+                    <div class="car-image"><img src="./images/Car (2).png" alt="Rolls-Royce"></div>
+                    <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 4 People</span></div>
+                    <div class="car-footer">
+                        <div class="price"><span class="amount">$96.00/</span><span class="unit">day</span></div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>All New Rush</h3>
+                            <p>SUV</p>
+                        </div>
+                        <span class="heart-icon">🤍</span>
+                    </div>
+                    <div class="car-image"><img src="./images/Car (4).png" alt="All New Rush"></div>
+                    <div class="car-specs"><span>⛽ 70L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                    <div class="car-footer">
+                        <div class="price">
+                            <span class="amount">$72.00/</span><span class="unit">day</span>
+                            <p class="old-price">$80.00</p>
+                        </div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>CR - V</h3>
+                            <p>SUV</p>
+                        </div>
+                        <span class="heart-icon" style="color: red;">❤️</span>
+                    </div>
+                    <div class="car-image"><img src="./images/Car (5).png" alt="CR - V"></div>
+                    <div class="car-specs"><span>⛽ 80L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                    <div class="car-footer">
+                        <div class="price"><span class="amount">$80.00/</span><span class="unit">day</span></div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+
+                <div class="car-card">
+                    <div class="car-card-header">
+                        <div>
+                            <h3>All New Terios</h3>
+                            <p>SUV</p>
+                        </div>
+                        <span class="heart-icon">🤍</span>
+                    </div>
+                    <div class="car-image"><img src="./images/Car (6).png" alt="All New Terios"></div>
+                    <div class="car-specs"><span>⛽ 90L</span><span>⚙️ Manual</span><span>👥 6 People</span></div>
+                    <div class="car-footer">
+                        <div class="price"><span class="amount">$74.00/</span><span class="unit">day</span></div>
+                        <button class="rent-btn">Rent Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="load-more-container">
+                <button class="show-more-btn">Show more car</button>
+                <span class="car-count">120 Car</span>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+<!-- FOOTER SECTION -->
+<footer class="main-footer">
+    <div class="container">
+
+        <!-- Footer Yuqori qismi -->
+        <div class="footer-top">
+            <!-- Brand va Shior -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo">MORENT</a>
+                <p>Our vision is to provide convenience and help increase your sales business.</p>
+            </div>
+
+            <!-- Linklar guruhlari -->
+            <div class="footer-links-container">
+                <!-- About ustuni -->
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Bussiness Relation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community ustuni -->
+                <div class="footer-col">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Podcast</a></li>
+                        <li><a href="#">Invite a friend</a></li>
+                    </ul>
+                </div>
+
+                <!-- Socials ustuni -->
+                <div class="footer-col">
+                    <h3>Socials</h3>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yupqa ajratuvchi chiziq -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Pastki qismi -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>©2022 MORENT. All rights reserved</p>
+            </div>
+            <div class="footer-legal">
+                <a href="#">Privacy & Policy</a>
+                <a href="#">Terms & Condition</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
 </body>
 
 </html>
