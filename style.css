@@ -2761,8 +2761,7 @@ body {
     box-sizing: border-box;
 }
 
-/* ================= HEADER FORCE FIX ================= */
-/* ================= HEADER BASE ================= */
+/* ================= MAIN HEADER ================= */
 .main-header {
     width: 100%;
     background-color: #ffffff;
@@ -2771,6 +2770,7 @@ body {
     position: relative;
 }
 
+/* Konteyner ikkala chetni ushlab turadi */
 .header-container {
     width: 100%;
     max-width: 1240px;
@@ -2783,7 +2783,7 @@ body {
     box-sizing: border-box;
 }
 
-/* CHAP QISM (Logo + Navigatsiya) */
+/* CHAP TOMON: Logo va Back/Next */
 .header-left {
     display: flex;
     align-items: center;
@@ -2823,7 +2823,7 @@ body {
     color: #FFFFFF;
 }
 
-/* O'NG QISM (Ikonkalar + Profil) */
+/* O'NG TOMON: Ikonkalar va Profil */
 .header-right {
     display: flex;
     align-items: center;
@@ -2864,16 +2864,24 @@ body {
     object-fit: cover;
 }
 
-/* DESKTOPDA MOBIL ELEMENTS YASHIRINADI */
+/* Desktop va Planshetda mobil elementlar ko'rinmaydi */
 .menu-toggle,
-.burger-btn {
+.burger-btn,
+.mobile-dropdown {
     display: none;
 }
 
-/* ================= 📱 TELEFON VERSO'YA (768px) ================= */
+
+/* ================= 📱 TELEFON VERSO'YA (768px va kichik) ================= */
 @media (max-width: 768px) {
 
-    /* Burger tugmani ko'rsatish */
+    /* Desktop elementlarini telefonda yashirish */
+    .nav-buttons,
+    .header-right {
+        display: none !important;
+    }
+
+    /* Burger tugmasi o'ng tomonga suriladi */
     .burger-btn {
         display: flex;
         flex-direction: column;
@@ -2890,52 +2898,64 @@ body {
         height: 3px;
         background-color: #596780;
         border-radius: 3px;
-        transition: 0.3s;
     }
 
-    /* Telefonda menyu elementlarini yashirish */
-    .nav-buttons,
-    .header-right {
+    /* BURGER BOSILGANDA OCHILADIGAN MENYU */
+    .mobile-dropdown {
         display: none;
-    }
-
-    /* Checkbox bosilganda ochiladigan mobil menyu */
-    .menu-toggle:checked~.header-right {
-        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 16px;
         position: absolute;
-        top: 100%;
+        top: calc(100% + 8px);
+        /* MORENT va menyu orasida masofa (joy) qoladi */
         left: 0;
         width: 100%;
         background-color: #ffffff;
-        padding: 20px 0;
+        padding: 20px;
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+        border-top: 1px solid #F3F5F7;
         z-index: 100;
+        box-sizing: border-box;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .mobile-nav-btn {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+        background-color: #F6F7F9;
+        color: #596780;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+
+    .mobile-nav-btn.active {
+        background-color: #3563E9;
+        color: #ffffff;
+    }
+
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        padding-top: 12px;
         border-top: 1px solid #F3F5F7;
     }
 
-    .menu-toggle:checked~.header-left .nav-buttons {
+    /* Checkbox bosilganda menyu chiqadi */
+    .menu-toggle:checked~.mobile-dropdown {
         display: flex;
-        position: absolute;
-        top: calc(100% + 140px);
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        padding: 0 0 20px 0;
-        justify-content: center;
-        z-index: 100;
-    }
-
-    /* Burger animatsiyasi (X bo'lib o'zgarishi) */
-    .menu-toggle:checked+.burger-btn span:nth-child(1) {
-        transform: translateY(7.5px) rotate(45deg);
-    }
-
-    .menu-toggle:checked+.burger-btn span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle:checked+.burger-btn span:nth-child(3) {
-        transform: translateY(-7.5px) rotate(-45deg);
     }
 }
