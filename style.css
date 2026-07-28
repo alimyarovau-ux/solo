@@ -2959,3 +2959,121 @@ body {
         display: flex;
     }
 }
+
+/* Pick-Up va Drop-Off o'ralgan asosiy konteyner */
+.booking-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    flex-wrap: wrap;
+    /* Ekranga sig'may qolganda pastga tushishi uchun */
+}
+
+/* Pick-Up va Drop-Off kartalari */
+.booking-card {
+    flex: 1 1 450px;
+    /* Teng taqsimlanadi, lekin min 450px gacha torayadi */
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Ichidagi Pick-Up header qismi */
+.booking-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #1A202C;
+}
+
+/* Selectlar joylashgan ichki flex-box */
+.booking-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.field-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 12px;
+    border-right: 1px solid #F3F5F7;
+}
+
+.field-group:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.field-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A202C;
+}
+
+.field-select {
+    font-size: 12px;
+    color: #90A3BF;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+/* O'rtadagi almashtirish (Swap / Transfer) tugmasi */
+.swap-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #3563E9;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(53, 99, 233, 0.25);
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* 📱 TELEFON VA NBO'LAK EKRANLAR UCHUN ADAPTIV (768px va kichik) */
+@media (max-width: 992px) {
+    .booking-container {
+        flex-direction: column;
+        /* Ustma-ust tushadi */
+        gap: 16px;
+    }
+
+    .booking-card {
+        width: 100%;
+        /* To'liq kenglikni egallaydi */
+        flex: none;
+    }
+
+    .swap-btn {
+        margin: -25px auto;
+        /* O'rtadagi tugma ikki blok orasida chiroyli turishi uchun */
+    }
+
+    .booking-fields {
+        flex-direction: row;
+        /* Mobil bo'lsa ham yonma-yon tursin desangiz */
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}

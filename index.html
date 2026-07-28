@@ -111,71 +111,70 @@
     </main>
 
     <script src="script.js"></script>
-    <section class="booking-container">
+    <section class="booking-section">
+        <div class="booking-container">
 
-        <div class="booking-card">
-            <div class="card-title">
-                <span class="dot blue-dot"></span>
-                <h3>Pick - Up</h3>
-            </div>
-            <div class="booking-fields">
-                <div class="field-group">
-                    <label>Locations</label>
-                    <select>
-                        <option>Select your city</option>
-                        <option>Tashkent</option>
-                    </select>
+            <!-- 1. Pick-Up Qismi -->
+            <div class="booking-card">
+                <div class="booking-header">
+                    <input type="radio" checked id="pickup" name="type">
+                    <label for="pickup">Pick - Up</label>
                 </div>
-                <div class="divider"></div>
-                <div class="field-group">
-                    <label>Date</label>
-                    <select>
-                        <option>Select your date</option>
-                    </select>
-                </div>
-                <div class="divider"></div>
-                <div class="field-group">
-                    <label>Time</label>
-                    <select>
-                        <option>Select your time</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-
-        <button class="switch-btn">
-            <span class="switch-icon">↕</span>
-        </button>
-
-        <div class="booking-card">
-            <div class="card-title">
-                <span class="dot light-blue-dot"></span>
-                <h3>Drop - Off</h3>
-            </div>
-            <div class="booking-fields">
-                <div class="field-group">
-                    <label>Locations</label>
-                    <select>
-                        <option>Select your city</option>
-                        <option>Tashkent</option>
-                    </select>
-                </div>
-                <div class="divider"></div>
-                <div class="field-group">
-                    <label>Date</label>
-                    <select>
-                        <option>Select your date</option>
-                    </select>
-                </div>
-                <div class="divider"></div>
-                <div class="field-group">
-                    <label>Time</label>
-                    <select>
-                        <option>Select your time</option>
-                    </select>
+                <div class="booking-fields">
+                    <div class="field-group">
+                        <span class="field-title">Locations</span>
+                        <select class="field-select">
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <span class="field-title">Date</span>
+                        <select class="field-select">
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <span class="field-title">Time</span>
+                        <select class="field-select">
+                            <option>Select your time</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+
+            <!-- O'rtadagi Almashtirish Tugmasi -->
+            <button class="swap-btn">
+                <i class="fa-solid fa-arrows-up-down"></i>
+            </button>
+
+            <!-- 2. Drop-Off Qismi -->
+            <div class="booking-card">
+                <div class="booking-header">
+                    <input type="radio" id="dropoff" name="type">
+                    <label for="dropoff">Drop - Off</label>
+                </div>
+                <div class="booking-fields">
+                    <div class="field-group">
+                        <span class="field-title">Locations</span>
+                        <select class="field-select">
+                            <option>Select your city</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <span class="field-title">Date</span>
+                        <select class="field-select">
+                            <option>Select your date</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <span class="field-title">Time</span>
+                        <select class="field-select">
+                            <option>Select your time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
