@@ -3077,3 +3077,31 @@ body {
         gap: 16px;
     }
 }
+
+.rec-card-specs span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #90A3BF;
+}
+
+.rec-card-specs i {
+    font-size: 18px;
+    /* Ikonka hajmiga aniq qiymat bering */
+    display: inline-block;
+}
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    /* !important Font Awesome shriftini o'chirib qo'yadi */
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Font Awesome ikonkalarining o'z shriftini tiklash */
+i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
